@@ -1,0 +1,1 @@
+Error: no Armstrong numbers in array
