@@ -1,0 +1,1 @@
+Error: no words in initial string
