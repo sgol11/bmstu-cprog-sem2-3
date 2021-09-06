@@ -1,0 +1,7 @@
+Golitsyna Svetlana 5 5 5 5
+Gorbunova Ksenia 4 5 5 4
+Gorokhova Elena 4 3 3 5
+Ivanov Ivan 5 3 4 5
+Ivanov Konstantin 5 3 3 4
+Ivanova Polina 5 4 4 4
+Popov Roman 5 5 4 3
