@@ -1,0 +1,1 @@
+Error: no correct numbers in sequence
