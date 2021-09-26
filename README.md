@@ -1,1 +1,1 @@
-# C_labs
+# C-prog labs (3 sem)
