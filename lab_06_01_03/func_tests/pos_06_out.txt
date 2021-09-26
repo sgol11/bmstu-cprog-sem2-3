@@ -1,0 +1,6 @@
+pen
+75
+pencil
+30
+copybook
+54
