@@ -1,4 +1,4 @@
-#include "check_sort.h"
+#include "../inc/check_sort.h"
 
 START_TEST(test_mysort_null_arr)
 {

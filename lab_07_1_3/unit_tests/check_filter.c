@@ -1,4 +1,4 @@
-#include "check_filter.h"
+#include "../inc/check_filter.h"
 
 START_TEST(test_filter_null_pb_src)
 {

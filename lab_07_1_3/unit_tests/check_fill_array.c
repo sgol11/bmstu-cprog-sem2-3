@@ -1,4 +1,4 @@
-#include "check_fill_array.h"
+#include "../inc/check_fill_array.h"
 
 START_TEST(test_fill_arr_file_does_not_exist)
 {

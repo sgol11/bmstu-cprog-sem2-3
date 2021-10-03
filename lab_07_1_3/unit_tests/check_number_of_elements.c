@@ -1,4 +1,4 @@
-#include "check_number_of_elements.h"
+#include "../inc/check_number_of_elements.h"
 
 START_TEST(test_elem_num_file_does_not_exist)
 {

@@ -1,9 +1,9 @@
-#include "check_main.h"
-#include "check_filter.h"
-#include "check_fill_array.h"
-#include "check_number_of_elements.h"
-#include "check_sort.h"
-#include "check_output.h"
+#include "../inc/check_main.h"
+#include "../inc/check_filter.h"
+#include "../inc/check_fill_array.h"
+#include "../inc/check_number_of_elements.h"
+#include "../inc/check_sort.h"
+#include "../inc/check_output.h"
 
 int main(void)
 {

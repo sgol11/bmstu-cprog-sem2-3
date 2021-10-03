@@ -1,4 +1,4 @@
-#include "check_output.h"
+#include "../inc/check_output.h"
 
 START_TEST(test_output_usual)
 {
