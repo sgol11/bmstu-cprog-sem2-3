@@ -22,3 +22,10 @@ void print_array(FILE *file, int *pb, int *pe)
         p++;
     }
 }
+
+void free_arr(int **pb, int **pe)
+{
+    free(*pb);
+    *pb = NULL;
+    *pe = NULL;
+}

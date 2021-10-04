@@ -8,7 +8,7 @@ START_TEST(test_filter_null_pb_src)
     int rc = key(NULL, init_arr, &res_pb, &res_pe);
     ck_assert_int_eq(rc, ERR_NO_DATA);
     
-    free_new_arr(&res_pb, &res_pe);
+    free_arr(&res_pb, &res_pe);
 }
 END_TEST
 
@@ -20,7 +20,7 @@ START_TEST(test_filter_null_pe_src)
     int rc = key(init_arr, NULL, &res_pb, &res_pe);
     ck_assert_int_eq(rc, ERR_NO_DATA);
     
-    free_new_arr(&res_pb, &res_pe);
+    free_arr(&res_pb, &res_pe);
 }
 END_TEST
 
@@ -32,7 +32,7 @@ START_TEST(test_filter_pb_equals_pe)
     int rc = key(init_arr, init_arr, &res_pb, &res_pe);
     ck_assert_int_eq(rc, ERR_NO_DATA);
     
-    free_new_arr(&res_pb, &res_pe);
+    free_arr(&res_pb, &res_pe);
 }
 END_TEST
 
@@ -45,7 +45,7 @@ START_TEST(test_filter_no_res_data)
     int rc = key(init_arr, init_arr + n, &res_pb, &res_pe);
     ck_assert_int_eq(rc, ERR_NO_RES_DATA);
     
-    free_new_arr(&res_pb, &res_pe);
+    free_arr(&res_pb, &res_pe);
 }
 END_TEST
 
@@ -61,7 +61,7 @@ START_TEST(test_filter_one_neg)
     ck_assert_int_eq(*res_pb, 0);
     ck_assert_int_eq(*(res_pb + 4), 4);
     
-    free_new_arr(&res_pb, &res_pe);
+    free_arr(&res_pb, &res_pe);
 }
 END_TEST
 
@@ -75,7 +75,7 @@ START_TEST(test_filter_free)
         *p++ = i;
     res_pe = res_pb + n;
 
-    free_new_arr(&res_pb, &res_pe);
+    free_arr(&res_pb, &res_pe);
     ck_assert_ptr_null(res_pb);
     ck_assert_ptr_null(res_pe);
 }

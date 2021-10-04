@@ -26,7 +26,7 @@ void measure_time(char *file_name, int arr_type)
     FILE *file = fopen(file_name, "w");
     fprintf(file, "n,mysort,qsort\n");
 
-    for (int n = 5000; n <= 50000; n += 5000)
+    for (int n = 2000; n <= 10000; n += 200)
     {
         int *arr1 = NULL, *arr2 = NULL;
         arr1 = malloc(n * sizeof(int));
@@ -35,7 +35,7 @@ void measure_time(char *file_name, int arr_type)
         time_spent1 = 0;
         time_spent2 = 0;
 
-        for (int cnt = 0; cnt < 3; cnt++)
+        for (int cnt = 0; cnt < 10; cnt++)
         {
             switch (arr_type)
             {
@@ -76,8 +76,8 @@ void measure_time(char *file_name, int arr_type)
             printf("n = %d : %d measure\n", n, cnt + 1);
         }
 
-        time_spent1 /= 3; 
-        time_spent2 /= 3; 
+        time_spent1 /= 10; 
+        time_spent2 /= 10; 
             
         fprintf(file, "%d,", n);
         fprintf(file, "%lf,", time_spent1);

@@ -3,6 +3,7 @@
 
 #include "check_main.h"
 #include "input.h"
+#include "output.h"
 
 Suite* check_fill_arr(void);
 

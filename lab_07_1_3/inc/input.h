@@ -3,8 +3,7 @@
 
 #include "main.h"
 
-int number_of_elements(char *file_name);
-int fill_array(char *file_name, int *arr, int num);
-void free_init_arr(int **arr);
+int number_of_elements_from_file(char *file_name);
+int fill_array_from_file(char *file_name, int *arr, int num);
 
 #endif

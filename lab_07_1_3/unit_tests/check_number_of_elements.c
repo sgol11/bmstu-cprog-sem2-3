@@ -2,21 +2,21 @@
 
 START_TEST(test_elem_num_file_does_not_exist)
 {
-    int rc = number_of_elements("unit_tests/files/does_not_exist.txt");
+    int rc = number_of_elements_from_file("unit_tests/files/does_not_exist.txt");
     ck_assert_int_eq(rc, ERR_NO_FILE);
 }
 END_TEST
 
 START_TEST(test_elem_num_empty_file)
 {
-    int rc = number_of_elements("unit_tests/files/number_of_elements_1.txt");
+    int rc = number_of_elements_from_file("unit_tests/files/number_of_elements_1.txt");
     ck_assert_int_eq(rc, ERR_NO_DATA);
 }
 END_TEST
 
 START_TEST(test_elem_num_usual_five_numbers)
 {
-    int rc = number_of_elements("unit_tests/files/number_of_elements_2.txt");
+    int rc = number_of_elements_from_file("unit_tests/files/number_of_elements_2.txt");
     ck_assert_int_eq(rc, 5);
 }
 END_TEST

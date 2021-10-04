@@ -9,8 +9,7 @@
 #define ERR_MEMORY -5
 
 int key(const int *pb_src, const int *pe_src, int **pb_dst, int **pe_dst);
-void get_last_neg(const int *pb_src, const int *pe_src, const int **last_neg);
-void read_to_last_neg(const int *pb_src, const int *last_neg, int *arr);
-void free_new_arr(int **pb, int **pe);
+void find_last_neg(const int *pb_src, const int *pe_src, const int **last_neg);
+void copy_to_last_neg(const int *pb_src, const int *last_neg, int *arr);
 
 #endif

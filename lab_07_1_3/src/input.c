@@ -1,15 +1,15 @@
 #include "../inc/input.h"
 
-int number_of_elements(char *file_name)
+int number_of_elements_from_file(char *file_name)
 {
-    int num = 0, x = 0;
+    int num = 0, cur_elem = 0;
     FILE *file = fopen(file_name, "r");
 
     if (!file)
         num = ERR_NO_FILE;
     else
     {
-        while (!feof(file) && !ferror(file) && fscanf(file, "%d", &x) == 1)
+        while (!feof(file) && !ferror(file) && fscanf(file, "%d", &cur_elem) == 1)
             num++;
 
         if (num == 0)
@@ -21,7 +21,7 @@ int number_of_elements(char *file_name)
     return num;
 }
 
-int fill_array(char *file_name, int *arr, int num)
+int fill_array_from_file(char *file_name, int *arr, int num)
 {
     int err_code = OK;
 
@@ -31,7 +31,7 @@ int fill_array(char *file_name, int *arr, int num)
         err_code = ERR_NO_FILE;
     else
     {
-        for (int i = 0; i < num; i++)
+        for (int i = 0; i < num && err_code == OK; i++)
         {
             if (feof(file) || ferror(file) || fscanf(file, "%d", arr + i) != 1)
                 err_code = ERR_INPUT;
@@ -40,10 +40,4 @@ int fill_array(char *file_name, int *arr, int num)
     }
 
     return err_code;
-}
-
-void free_init_arr(int **arr)
-{
-    free(*arr);
-    *arr = NULL;
 }

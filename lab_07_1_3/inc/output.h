@@ -5,5 +5,6 @@
 
 int write_into_file(char *file_name, int *pb, int *pe);
 void print_array(FILE *file, int *pb, int *pe);
+void free_arr(int **pb, int **pe);
 
 #endif

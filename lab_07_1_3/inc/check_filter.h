@@ -3,6 +3,7 @@
 
 #include "check_main.h"
 #include "filter.h"
+#include "output.h"
 
 Suite* check_filter(void);
 

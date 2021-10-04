@@ -11,7 +11,7 @@ int main(int argc, char **argv)
     int error_code = OK;
 
     int n = 0;
-    int *init_arr = NULL;
+    int *init_arr = NULL, *init_arr_end = NULL;
     int *pb_res_arr = NULL, *pe_res_arr = NULL;
     int filter = 0;
     
@@ -24,7 +24,7 @@ int main(int argc, char **argv)
 
     if (error_code == OK)
     {
-        n = number_of_elements(argv[1]);
+        n = number_of_elements_from_file(argv[1]);
         if (n < 0)
             error_code = n;
     }
@@ -36,7 +36,7 @@ int main(int argc, char **argv)
         if (!init_arr)
             error_code = ERR_MEMORY;
         else
-            error_code = fill_array(argv[1], init_arr, n);
+            error_code = fill_array_from_file(argv[1], init_arr, n);
     }
 
     if (error_code == OK && filter)
@@ -53,9 +53,10 @@ int main(int argc, char **argv)
         error_code = mysort(init_arr, n, sizeof(int), compare_int);
         write_into_file(argv[2], init_arr, init_arr + n); 
     }
-
-    free_init_arr(&init_arr);
-    free_new_arr(&pb_res_arr, &pe_res_arr);
+    
+    init_arr_end = init_arr + n;
+    free_arr(&init_arr, &init_arr_end);
+    free_arr(&pb_res_arr, &pe_res_arr);
     
     return error_code;
 }
