@@ -1,0 +1,11 @@
+5
+apple
+10
+cucumber
+50
+tomato
+70
+milk
+40
+chocolate
+90
